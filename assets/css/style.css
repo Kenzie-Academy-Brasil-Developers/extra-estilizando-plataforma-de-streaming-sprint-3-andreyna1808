@@ -21,7 +21,7 @@ img{
     max-width: 800px;
 }
 .container{
-    width: 100%;
+    width: 85%;
     max-width: 1735px;
     margin: 0  auto;
     padding: 0px 30px;
@@ -37,6 +37,7 @@ div .full-container{
 .hidden {
     display: none;
 }
+
 /* IMAGEM PRINCIPAL */
 body{
     background-color: #141414;
@@ -55,9 +56,11 @@ header .flex-column:nth-child(3) {
     margin-left: auto;
 }
 .menu-usuario .pesquisar {
+    cursor: pointer;
     display: none;
 }
 .logo figure {
+    cursor: pointer;
     width: 80px;
 }
 .abrir-submenu {
@@ -69,15 +72,9 @@ header .flex-column:nth-child(3) {
     cursor: pointer;
 }    
 .abrir-submenu img{
+    cursor: pointer;
     margin-left: 10px;
     width: 15px;
-}
-.menu {
-    width: 100px;
-    background-color: rgba(0, 0, 0, 0.795);
-    padding: 10px;
-    top: 40px;
-    transition-duration: 0.5s;
 }
 .menu a {
     color: var(--white-color);
@@ -85,6 +82,7 @@ header .flex-column:nth-child(3) {
     font-size: 14px;
 }
 .menu-usuario {
+    cursor: pointer;
     width: 55px;
     display: flex;
     align-items: center;
@@ -99,7 +97,13 @@ header .flex-column:nth-child(3) {
 .usuario img {
     width: 28px;
     border-radius: 5px;
-}  
+} 
+.hidden-menu li {
+    display: none;
+}
+.hidden-menu li:hover {
+    display: flex;
+}
 /* INICIAL */
 .secao-destaque {
     margin-top: 10px;
@@ -132,6 +136,7 @@ header .flex-column:nth-child(3) {
     font-family: var(--general-font);
 }
 .mais-informacoes {
+    cursor: pointer;
     background-color: rgba(109,109,110,0.7);
     color: #ffffff;
 }
@@ -140,6 +145,7 @@ header .flex-column:nth-child(3) {
     color:var(--white-color);
 }
 .assistir {
+    cursor: pointer;
     background-color: #ffffff;
     color: #000000;
 }
@@ -151,7 +157,6 @@ header .flex-column:nth-child(3) {
     width: 15px;
     padding-right: 5px;
 }
-
 /* CATALOGO */
 .secao-catalogo {
     width: 426px;
@@ -168,25 +173,25 @@ header .flex-column:nth-child(3) {
     flex-wrap: wrap;
 }
 main.pagina-inicial section.secao-catalogo .container--mobile{
-    width: 93%;
-    padding-left: 30px;
+    width: 85%;
+    padding-left: 60px;
+    box-sizing: border-box;
 }
 .secao-catalogo .flex-column {
     width: 50%;
     flex-shrink: 0;
     padding-right: 5px;
 }
+.secao-catalogo .flex-column a {
+    width: 100%;
+}
 .secao-catalogo .flex-column figure {
-    border: 2px solid red;
-    margin: 0;
-    padding: 0;
     width: 100%;
 }
 .secao-catalogo .flex-column img  {
-    border: 2px solid green;
     border-radius: 5px;
-    width: 72%;
-    margin-left: 5px;
+    width: 100%;
+    margin-left: 2px;
     padding: 0;
 }
 main.pagina-inicial section.secao-catalogo .container--desktop{
@@ -239,6 +244,9 @@ footer .flex {
     padding: 0px 60px;
 }
 .menu-usuario .pesquisar {
+    display: flex;
+}
+.hidden-menu li {
     display: flex;
 }
 .logo figure {
@@ -330,8 +338,6 @@ main.pagina-inicial section.secao-catalogo .container--desktop{
     justify-content: center;
     margin-left: 60px;
 }
-
-
 /* FOOTER */
 footer {
     max-width: 800px;
