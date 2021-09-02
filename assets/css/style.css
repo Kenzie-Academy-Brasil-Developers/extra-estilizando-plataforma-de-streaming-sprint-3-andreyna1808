@@ -1,103 +1,349 @@
-
-/*
-Theme Name: Landing Page Kenzie Academy
-Theme URI: https://kenzie.com.br/
-Author: Kenzie Academy 
-Author URI: https://kenzie.com.br/
-Description: Descrção do thema.
-Version: 1.0
-Text Domain: https://kenzie.com.br/
-
---------------------------------------------
-ESTRUTURAÇÃO BASE
---------------------------------------------
-**** DECLARAÇÃO DE VARIÁVEIS
-**** ESTILOS GERAIS
-**** BODY
-**** HEADER
-**** FOOTER
-**** PÁGINA INICIAL
-**** EXTRAS
-**** @MEDIA
-
-family=Montserrat -> Menus
-family=Lato -> Títulos, textos
-*/
-
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-/* FONTS */
 
-/* VARIÁVEIS */
-:root{}
-  
+/* VARIÁVEIS FAVOR ANDREYNA USAR ELAS, FACILITA*/
+:root{
+    --general-font: 'Helvetica Neue','Helvetica','Arial','sans-serif';
+    --white-color: #ffffff;
+    --mobile-small-font: 12px;
+}
+
 /* GERAL */
-html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
     list-style: none;
+    font-family: var(--general-font);
 }
 img{
     max-width: 800px;
 }
-div.flex{
+.container{
+    width: 100%;
+    max-width: 1735px;
+    margin: 0  auto;
+    padding: 0px 30px;
+}
+div .flex{
     display: flex;
 }
-div.full-container{
+div .full-container{
     width: 100%;
     max-width: 1850px;
     margin:0 auto;
 }
-div.large-container{
-    width: 100%;
-    max-width: 1170px;
-    margin:0 auto;
+.hidden {
+    display: none;
 }
-div.container{
-    width: 100%;
-    max-width: 1140px;
-    margin:0 auto;
+/* IMAGEM PRINCIPAL */
+body{
+    background-color: #141414;
+    background-image: url(../img/movies/ted.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
-/* GERAL */
-  
-/* HTML */
-html{}
-/* HTML */
-  
-/* BODY */
-body{}
-/* BODY */
   
 /* HEADER */
-header{}
-/* HEADER */
-  
+header{
+    padding-top: 15px;
+}
+header .flex-column:nth-child(3) {
+    width: 20px;
+    padding: 2px 0;
+    margin-left: auto;
+}
+.menu-usuario .pesquisar {
+    display: none;
+}
+.logo figure {
+    width: 80px;
+}
+.abrir-submenu {
+    margin-left: 60px;
+    color: var(--white-color);
+    width: 100px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.abrir-submenu img{
+    margin-left: 10px;
+    width: 15px;
+}
+.menu {
+    width: 100px;
+    background-color: rgba(0, 0, 0, 0.795);
+    padding: 10px;
+    top: 40px;
+    transition-duration: 0.5s;
+}
+.menu a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 14px;
+}
+.floating-menu {
+    top: -10%;
+    opacity: 0;
+}
+.hidden-menu {
+    display: none;
+}
+.menu-usuario {
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu-usuario span {
+    line-height: 0px;
+}
+.pesquisar img {
+    width: 20px;
+}
+.usuario img {
+    width: 28px;
+    border-radius: 5px;
+}  
 /* FOOTER */
-footer{}
-/* FOOTER */
-
+footer{
+    margin-top: 50px;
+    color: gray;
+}
+footer .flex {
+    flex-direction: column;
+}
+.links {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.links li{
+    width: 50%;
+    padding-bottom: 15px;
+}
+.links a {
+    color: gray;
+    text-decoration: none;
+    font-size: 13px;
+}                  
+.redes-sociais {
+    display: flex;
+}
+.redes-sociais li{
+    padding-right: 20px;
+    padding-bottom: 15px;
+}
+.redes-sociais img {
+    width: 20px;
+}
+.copyright {
+    padding-bottom: 10px;
+    font-size: 11px;
+}
 /* INICIAL */
-main{}
-/* INICIAL */
+.secao-destaque {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.secao-destaque-conteudo figure > img {
+    width: 100%;
+    max-width: 160px;
+}
+.secao-destaque-conteudo p {
+    text-align: left;
+    font-size: var(--mobile-small-font);
+    color: var(--white-color);
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+    max-width: 60%;
+    padding: 5px 0px;
+    font-size: var(--mobile-small-font);
+}
+.secao-destaque-buttons {
+    display: flex;
+}
+.secao-destaque-buttons button{
+    font-size: var(--mobile-small-font);
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 15px;
+    margin-right: 10px;
+    font-family: var(--general-font);
+}
+.mais-informacoes {
+    background-color: rgba(109,109,110,0.7);
+    color: #ffffff;
+}
+.mais-informacoes:hover {
+    background-color: rgba(109,109,110,0.4);
+    color:var(--white-color);
+}
+.assistir {
+    background-color: #ffffff;
+    color: #000000;
+}
+.assistir:hover {
+    background-color: rgba(255,255,255,0.75);
+    color: #000000;
+}
+.secao-destaque-buttons img {
+    width: 15px;
+    padding-right: 5px;
+}
 
-/* EXTRAS */
+/* CATALOGO */
+.secao-catalogo {
+    width: 436px;
+    padding-bottom: 10px;
+}
+.secao-catalogo-titulo {
+    font-size: 17px;
+    color: #e5e5e5;
+    padding-bottom: 4px;
+}
+.secao-catalogo .flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.secao-catalogo .flex-column {
+    width: 50%;
+    flex-shrink: 0;
+    padding-right: 5px;
+    box-sizing: border-box;
+}
+.secao-catalogo .flex-column a {
+    width: 100%;
+}
+.secao-catalogo .flex-column figure {
+    width: 100%;
+}
+.secao-catalogo .flex-column img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+/* MEDIA QUERIES */  
+@media screen and (min-width: 768px) {
+        .container {
+            width: 100%;
+            padding: 0px 60px;
+        }
+        .logo figure {
+            width: 92px;
+            height: auto;
+        }
+            .usuario img {
+                width: 32px;
+                border-radius: 5px;
+                margin-left: 15px;
+            }
+        header .flex-column nav {
+            display: flex;
+            align-items: center;
+        }
+            .abrir-submenu {
+                display: none;
+            }
+    
+            .menu {
+                font-size: 14px;
+                background-color: transparent;
+                width: 360px;
+                display: flex;
+                justify-content: space-evenly;
+                position: relative;
+                top: 0;
+                left: 0;
+            }
+            
+            .floating-menu {
+                opacity: 1;
+            }
 
-/* para estilizar a scrollbar */
-::-webkit-scrollbar{}
-::-webkit-scrollbar-button{}
-::-webkit-scrollbar-track{}
-::-webkit-scrollbar-track-piece{}
-::-webkit-scrollbar-thumb{}
-::-webkit-scrollbar-corner{}
-::-webkit-resizer{}
+                .menu li:hover {
+                    color: #b3b3b3
+                }
 
-/* EXTRAS */
-  
+                    .menu a {
+                        color: #e5e5e5;
+                    }
 
-/* MEDIA QUERIES */
-    @media screen and (min-width: 400px) {}
-  
-    @media screen and (min-width: 800px) {}
-/* MEDIA QUERIES */
+                    .item-ativo a{
+                        color: var(--white-color);
+                        font-weight: 600;
+                    }
+
+        .secao-destaque {
+            margin-top: 15%;
+            margin-bottom: 100px;
+        }
+
+            .secao-destaque-conteudo figure {
+                width: 50%;
+                max-width: 650px;
+            }
+
+            .secao-destaque-conteudo p {
+                font-size: 22px;
+                padding: 20px 0px;
+            }
+
+            .secao-destaque-buttons button {
+                font-size: 22px;
+                border-radius: 5px;
+                padding: 8px 20px;
+                margin-right: 12px;
+                font-weight: 500;
+            }
+
+                .mais-informacoes:hover {
+                    background-color: rgba(109,109,110,0.4);
+                }
+
+                .assistir:hover {
+                    background-color: rgba(255,255,255,0.75);
+                }
+
+                .secao-destaque-buttons img {
+                    width: 17px;
+                    padding-right: 5px;
+                }
+        .secao-catalogo {
+            padding-bottom: 50px;
+        }
+        .secao-catalogo-titulo  {
+            font-size: 26px;
+        }
+        .secao-catalogo .flex-column {
+            max-width: 287px;
+        }
+        .secao-catalogo .flex {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+
+        footer {
+            max-width: 800px;
+            margin: 0 auto;
+            margin-top: 50px;
+            border-top: 1px solid rgb(128 128 128 / 26%);
+            padding-top: 30px;
+        }
+        footer .flex {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+         .links {
+             width: 300px;
+             flex-direction: column;
+         }   
+         .copyright {
+             padding-top: 30px;
+         }
+}
