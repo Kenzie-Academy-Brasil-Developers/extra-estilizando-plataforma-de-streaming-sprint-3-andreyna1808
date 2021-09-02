@@ -4,11 +4,11 @@ let aberto = false
 
 button.addEventListener('click', () => {
     if (aberto) {
-        ul.style.display = 'block'
+        ul.style.display = 'none'
         aberto = false;
     }
     else {
-        ul.style.display = 'none'
+        ul.style.display = 'block'
         aberto = true;
     }
 })
